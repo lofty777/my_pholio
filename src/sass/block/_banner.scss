@@ -1,0 +1,23 @@
+.banner {
+    width: 1920px;
+    height: 970px;
+    padding-left: 100px;
+
+    &__header {
+        width: 138px;
+        height: 34px;
+        font-size: 28px;
+        font-weight: bold;
+        text-decoration: none;
+        line-height: 34px;
+        letter-spacing: 0.01em;
+        color: $black;
+        margin-top: 50px;
+
+        span {
+            background: $blue-grad;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
