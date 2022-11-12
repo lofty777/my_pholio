@@ -5,6 +5,8 @@
     padding-left: 100px;
 
     &__header {
+        display: block;
+        height: 34px;
         font-size: 28px;
         font-weight: bold;
         text-decoration: none;
@@ -24,23 +26,29 @@
     }
 
     .banner-menu {
-        display: grid;
         height: 140px;
-        grid-template-columns: repeat(4, 140px);
+        display: grid;
+        grid-template-columns: repeat(4, minmax(140px, auto));
         column-gap: 20px;
         align-items: center;
 
         &__item {
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+        &__link {
+            display: block;
             font-style: normal;
             font-weight: 400;
             font-size: 20px;
             line-height: 25px;
             letter-spacing: 0.01em;
             color: $black;
-            text-align: center;
             text-decoration: none;
             cursor: default;
             transition:  1.5s linear all;
+            z-index: 1;
 
 
             &:hover {
@@ -50,9 +58,52 @@
                 -webkit-text-fill-color: transparent;
             }
 
-        }
+     
 
 
     }
+    &__elipse {
+        width: 40px;
+        height: 40px;
+        background: $light-blue;
+        opacity: 0;
+        transition: opacity 1.4s;
+        border-radius: 100%;
+        position: absolute;
+        
+        left: 37%;
+        transform: translateX(-50%);
+        bottom: 50%;
+        transform: translateY(50%);
+        
+    }
+    &__elipse:after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 80px;
+        background: $light-blue;
+        opacity: 0.6;
+        border-radius: 100%;
+        position: absolute;
+        left: -20px;
+        top: -20px;
+    }
+    &__elipse:before {
+        content: '';
+        display: block;
+        width: 120px;
+        height: 120px;
+        background: $light-blue;
+        opacity: 0.6;
+        border-radius: 100%;
+        position: absolute;
+        left: -40px;
+        top: -40px;
+    }
+    &__elipse:hover {
+        opacity: 0.6;
+        
+    }
 
-}
+}}

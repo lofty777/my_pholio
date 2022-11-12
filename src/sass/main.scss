@@ -9,37 +9,6 @@
 
 @import 'block/banner';
 
-.wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 140px;
-    height: 140px;
-    margin-left: 150px;
-}
-.circule {
-    position: relative;
-    width: 60px;
-    height: 60px;
-    border-radius: 100%;
-    background: linear-gradient(92.05deg, rgba(162, 182, 237, 0.35) 0%, rgba(33, 108, 207, 0.1) 99.29%);
-    opacity: 0.3;
-    &::after {
-        position: absolute;
-        content:'';
-        width: 100px;
-        height: 100px;
-        border-radius: 100%;
-        background: blue;
-        opacity: 0.3;  
 
-    }
-    
-}
-
-// .sun-quote-pages:hover {
-//     border: 9px double red;
-//     transform: scale(2.5);
-// }
 
 
