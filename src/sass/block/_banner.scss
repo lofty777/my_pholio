@@ -36,6 +36,13 @@
             align-items: center;
             text-align: center;
             position: relative;
+            &:hover {
+                &__elipse {
+                    width: 60px;
+                    height: 60px;
+                    opacity: 0.6;
+                }
+            }
         }
         &__link {
             position: relative;
@@ -51,7 +58,6 @@
             transition:  1.5s linear all;
             z-index: 1;
 
-
             &:hover {
                 font-weight: 700;
                 background: $blue-grad;
@@ -60,11 +66,11 @@
             }
         }
         &__elipse {
-            width: 60px;
-            height: 60px;
-            background: $light-blue;
+            width: 0px;
+            height: 0px;
+            background: $light;
             opacity: 1;
-            transition: opacity 1.4s;
+            transition:  1.4s all;
             border-radius: 100%;
             position: absolute;
             
@@ -72,40 +78,54 @@
             bottom: 50%;
             transform: translate(-50%, 50%);
             
+            
         }
         &__elipse:after {       
             content: '';
             display: block;
-            width: 100px;
-            height: 100px;
-            background: $light-blue;
+            width: 0px;
+            height: 0px;
+            background: $light;
             opacity: 0.6;
             border-radius: 100%;
+            transition: 1.4s all;
             position: absolute;
-            left: -20px;
-            top: -20px;
+            // left: -20px;
+            // top: -20px;
+            left: 50%;
+            bottom: 50%;
+            transform: translate(-50%, 50%);
         }
         &__elipse:before {
             content: '';
             display: block;
             width: 140px;
             height: 140px;
-            background: $light-blue;
+            background: $light;
             opacity: 0.6;
             border-radius: 100%;
             position: absolute;
-            left: -40px;
-            top: -40px;
+            // left: -40px;
+            // top: -40px;
+            left: 50%;
+            bottom: 50%;
+            transform: translate(-50%, 50%);
         }
         &__elipse:hover {
+            width: 60px;
+            height: 60px;
             opacity: 0.6;
             
         }
-
-     
-
-
+        &__elipse:hover::after {
+            width: 100px;
+            height: 100px;
+            opacity: 0.6;
+        }
+        &__elipse:hover::before {
+            width: 140px;
+            height: 140px;
+            opacity: 0.6;
+        }
     }
-   
-
 }
